@@ -53,13 +53,19 @@
 </script>
 
 <MapLibre
-	class="h-screen w-screen"
+	class="relative h-screen w-screen"
 	style="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
 	zoom={10}
 	pitch={45}
 	minZoom={6}
 	center={{ lng: 138.7, lat: 35.4 }}
 >
+	<div class="absolute top-3 left-3 z-10 rounded-md bg-white/80 p-3 leading-none backdrop-blur-sm">
+		GitHub: <a class="underline" href="https://github.com/MIERUNE/maplibre-contour-gsi-demo"
+			>MIERUNE/maplibre-contour-gsi-demo</a
+		>
+	</div>
+
 	<MapLibreContourSource
 		url={'https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png'}
 		maxzoom={14}
