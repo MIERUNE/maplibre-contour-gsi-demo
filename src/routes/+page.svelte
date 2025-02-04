@@ -10,7 +10,6 @@
 	} from 'svelte-maplibre-gl';
 	import { MapLibreContourSource } from 'svelte-maplibre-gl/contour';
 	import { decode, encode } from 'fast-png';
-	import { default as mlcontour } from 'maplibre-contour';
 
 	function gsiToTerrainRGB(r: number, g: number, b: number): [number, number, number] {
 		if (r == 128 && g == 0 && b == 0) return [1, 134, 160]; // NA値は0にマップ
